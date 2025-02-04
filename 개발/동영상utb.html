@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>동영상 mp4</title>
+    <link rel="stylesheet" href="./lib/css/reset.css" />
+    <link rel="stylesheet" href="./lib/css/swiper-bundle.min.css" />
+
+    <!-- 16:9비율로 맞추는 방법법 -->
+    <style>
+      .img_box {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        background: tomato;
+      }
+
+      .img_box iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+    <script src="./lib/js/jquery-1.12.4.js"></script>
+    <script src="./lib/js/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="img_box">
+      <iframe
+        width="1236"
+        height="695"
+        src="https://www.youtube.com/embed/pgtsLOGaz_U"
+        title="[드라마픽] 전여빈X손석구 통합본📁 또라이는 또라이를 알아본다🔥｜멜로가 체질｜JTBC 190928 방송 외"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
+</html>
