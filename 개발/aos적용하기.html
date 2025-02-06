@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형만들기01</title>
+    <link rel="stylesheet" href="./lib/css/reset.css" class="" />
+    <link rel="stylesheet" href="./css/style.css?ver=1.0" class="" />
+    <link rel="stylesheet" href="./lib/css/aos.css" />
+
+    <script src="./lib/js/jquery-1.12.4.js"></script>
+    <script src="./lib/js/aos.js"></script>
+
+    <style>
+      .main_visual {
+        height: 800px;
+        background: tomato;
+      }
+
+      .main_content {
+        padding: 200px 0;
+      }
+
+      .main_content .inner {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        gap: 30px;
+      }
+
+      .main_content .inner > * {
+        flex: 1;
+        height: 400px;
+      }
+
+      .main_content .inner .left {
+        background: tan;
+      }
+
+      .main_content .inner .right {
+        background: orange;
+      }
+
+      .footer {
+        height: 400px;
+        background: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main_visual">슬라이드드</div>
+
+    <main id="content">
+      <section class="main_content">
+        <div class="inner">
+          <div class="left" data-aos="fade-up" data-aos-duration="800">
+            left
+          </div>
+          <div
+            class="right"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
+            right
+          </div>
+        </div>
+      </section>
+      <section class="main_content">
+        <div class="inner">
+          <div class="left" data-aos="fade-up" data-aos-duration="800">
+            left
+          </div>
+          <div
+            class="right"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
+            right
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">footer</footer>
+    <script>
+      // 중요 ! AOS 는 작업 마지막에 하는것이다! AOS는 독립적으로 써야함 슬라이드나 스와이퍼 슬릭같은거를 같이 넣으면 안된다!  풀페이지에는 쓸 수가없음 스크로이 없기 때문에!
+      $(function () {
+        AOS.init();
+      });
+    </script>
+  </body>
+</html>
